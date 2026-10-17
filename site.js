@@ -120,7 +120,7 @@
     watch(reduce);
   }
 
-  // the live thing: is the kiosk open right now, in Fuengirola time? (hours as published: Mon–Sat 9:30–14:30)
+  // the live thing: is the kiosk open right now, in Fuengirola time? (hours: Tuesday to Saturday, 9:30–14:30)
   var status = document.querySelector('[data-status]');
   if (status && window.Intl && Intl.DateTimeFormat.prototype.formatToParts) {
     try {
@@ -128,13 +128,17 @@
       var get = function (type) { for (var k = 0; k < parts.length; k++) if (parts[k].type === type) return parts[k].value; return ''; };
       var day = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].indexOf(get('weekday'));
       var now = (+get('hour')) * 60 + (+get('minute'));
-      var workday = day >= 0 && day <= 5;
-      var open = workday && now >= 570 && now < 870;
+      var opensOn = function (d) { return d >= 1 && d <= 5; };  // martes a sábado
+      var open = opensOn(day) && now >= 570 && now < 870;
       var when;
       if (open) when = 'abierto, cierra a las 14:30';
-      else if (workday && now < 570) when = 'cerrado, abre hoy a las 9:30';
-      else if (day === 5) when = 'cerrado, abre el lunes a las 9:30';
-      else when = 'cerrado, abre mañana a las 9:30';
+      else if (opensOn(day) && now < 570) when = 'cerrado, abre hoy a las 9:30';
+      else {
+        var ahead = 1;
+        while (!opensOn((day + ahead) % 7)) ahead++;
+        var names = ['el lunes', 'el martes', 'el miércoles', 'el jueves', 'el viernes', 'el sábado', 'el domingo'];
+        when = 'cerrado, abre ' + (ahead === 1 ? 'mañana' : names[(day + ahead) % 7]) + ' a las 9:30';
+      }
       if (day >= 0) {
         status.textContent = 'En Fuengirola son las ' + fmt(now) + ': ' + when + '.';
         status.dataset.open = open ? 'yes' : 'no';
