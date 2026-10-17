@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nikoflor</title>
+<meta name="description" content="Floristería Nikoflor, en el Mercado Municipal de Fuengirola. Ramos hechos a mano cada mañana, flores y plantas. Escríbenos por WhatsApp.">
+<meta name="theme-color" content="#fbf7f1">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Nikoflor — floristería en el Mercado Municipal de Fuengirola">
+<meta property="og:description" content="A las nueve y media el quiosco está vacío. A las diez, ya es Nikoflor. Ramos hechos a mano cada mañana; escríbenos por WhatsApp.">
+<meta property="og:site_name" content="Nikoflor">
+<meta property="og:url" content="https://nikoflor.es/">
+<meta property="og:image" content="https://nikoflor.es/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="El quiosco de Nikoflor lleno de flores, en el Mercado Municipal de Fuengirola">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://nikoflor.es/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%235e2e3c'/><rect x='6' y='16' width='52' height='18' fill='%23fbf7f1'/><g fill='%23fbf7f1'><circle cx='12.5' cy='34' r='6.5'/><circle cx='25.5' cy='34' r='6.5'/><circle cx='38.5' cy='34' r='6.5'/><circle cx='51.5' cy='34' r='6.5'/></g></svg>">
+<link rel="preload" as="image" href="frames/01.webp" media="(min-width: 768px)">
+<link rel="preload" as="image" href="frames/01-1280.webp" media="(max-width: 767px)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..700&family=Young+Serif&display=swap">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<a class="skip" href="#s4">Saltar al contacto</a>
+<main>
+
+  <!-- §3 section 1 — La mañana: six frames, one locked camera, bound to scroll position -->
+  <section class="seq" id="s1" data-frames="6" data-src="frames/{n}.webp" data-src-narrow="frames/{n}-1280.webp" style="--frames: 6">
+    <div class="seq-stage">
+      <img class="seq-img" alt="El quiosco de Nikoflor en el Mercado Municipal de Fuengirola, llenándose de flores una mañana" decoding="async">
+      <p class="seq-caption" aria-live="off"></p>
+    </div>
+    <ol class="seq-lines visually-hidden">
+      <li>A las nueve y media, el quiosco está vacío.</li>
+      <li>Primero salen las cajas.</li>
+      <li>Luego, flor por flor.</li>
+      <li>Después, las plantas.</li>
+      <li>Las azules son la firma.</li>
+      <li>A las diez, ya es Nikoflor.</li>
+    </ol>
+  </section>
+
+  <!-- §3 section 2 — Ramos. The photograph is the owner's (frames/s2.jpg), not yet received. -->
+  <section class="chapter" id="s2">
+    <p class="pending">[Foto del dueño: un ramo terminado, en la mano, a la luz del día — pendiente]</p>
+    <h2>Hecho a mano, con respeto por cada flor.</h2>
+  </section>
+
+  <!-- §3 section 3 — Entrega. The photograph is the owner's (frames/s3.jpg), not yet received. -->
+  <section class="chapter" id="s3">
+    <p class="pending">[Foto del dueño: un ramo saliendo del quiosco — pendiente]</p>
+    <h2>Lo llevamos a casa. Normalmente, mañana.</h2>
+  </section>
+
+  <!-- §3 section 4 — the action. The awning band, frame 06 still, one line, one button, the facts, then the name at full width. -->
+  <section class="action" id="s4">
+    <div class="band" aria-hidden="true"></div>
+    <picture>
+      <source media="(max-width: 767px)" srcset="frames/06-1280.webp">
+      <img class="action-img" src="frames/06.webp" alt="El quiosco de Nikoflor abierto, lleno de flores, con el sol de la mañana" loading="lazy" decoding="async">
+    </picture>
+    <h2>Dime para quién es.</h2>
+    <a class="action-link" href="https://wa.me/34687834814?text=Hola%20Nikoflor%2C%20quiero%20un%20ramo%20para">Escribir por WhatsApp</a>
+    <footer class="facts">
+      <p class="action-facts">Mercado Municipal, Fuengirola · lunes a sábado, 9:30–14:30</p>
+      <p class="close" aria-hidden="true">Nikoflor</p>
+    </footer>
+  </section>
+
+</main>
+<script src="sequence.js" defer></script>
+</body>
+</html>

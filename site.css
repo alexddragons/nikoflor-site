@@ -1,0 +1,136 @@
+/* Nikoflor — the style pass, plus the redesign pass of 2026-10-17 (redesign-existing-projects, at Alex's request).
+   Every colour, size and step is a token from the design system's tokens.json; nothing is invented. */
+
+:root {
+  /* colour — theme "dia" */
+  --cal: #fbf7f1;
+  --cal-hondo: #f3eadf;
+  --linea: #e5d8cc;
+  --tinta: #2b1d21;
+  --tinta-suave: #6b565b;
+  --vino: #5e2e3c;
+  --teja: #a04e2c;
+  --arena: #e9be86;
+  --hoja: #45633f;
+  --azul: #2342a8;
+  /* spacing, radius, shadow */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 48px;
+  --radius-sm: 4px;
+  --radius-md: 12px;
+  --radius-full: 9999px;
+  --shadow-card: 0 1px 2px #2b1d210f, 0 6px 18px -6px #2b1d2124;
+  --focus-ring: 0 0 0 2px #fbf7f1, 0 0 0 4px #2342a8;
+  /* type */
+  --font-serif: "Young Serif", Georgia, "Times New Roman", serif;
+  --font-sans: Archivo, "Helvetica Neue", Arial, sans-serif;
+  /* the grid never moves: one inset, one text column, the same in every section.
+     On wide screens the content sits in a 1440px container; the frames stay full-bleed. */
+  --inset: var(--space-3);
+  --section-gap: var(--space-4);
+  --col: 36rem;
+  --max: 1440px;
+  --edge: max(var(--inset), calc((100% - var(--max)) / 2));
+  /* the sequence caption row is reserved at two lines so the frame never shifts between captions */
+  --caption-row: calc(2 * 60px + var(--space-3) + var(--inset));
+}
+@media (min-width: 768px) {
+  :root { --inset: var(--space-4); --section-gap: 96px; }
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--cal); }
+body { color: var(--tinta); font: 400 17px/26px var(--font-sans); }
+html { scroll-behavior: auto; }
+h2, .seq-caption { text-wrap: balance; }
+
+/* keyboard users can go straight to the action */
+.skip { position: absolute; left: var(--inset); top: -100px; z-index: 2; padding: var(--space-2) var(--space-3); border-radius: var(--radius-full); background: var(--vino); color: var(--cal); font: 600 16px/20px var(--font-sans); text-decoration: none; }
+.skip:focus-visible { top: var(--inset); outline: none; box-shadow: var(--focus-ring); }
+
+/* ── 1 · La mañana: the sequence ───────────────────────────────────────── */
+.seq { position: relative; height: calc(var(--frames) * 100vh); height: calc(var(--frames) * 100svh); }
+.seq-stage {
+  position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden;
+  display: grid; grid-template-rows: minmax(0, 1fr) auto;
+  background: var(--cal);
+}
+/* the frame is never cropped: it fits its row whole, resting on the caption row, cal around it */
+.seq-img { display: block; width: 100%; height: 100%; min-height: 0; object-fit: contain; object-position: center bottom; }
+.seq-caption {
+  margin: 0; min-height: var(--caption-row);
+  padding: var(--space-3) var(--edge) var(--inset);
+  max-width: calc(var(--col) + 2 * var(--edge));
+  font: 400 56px/60px var(--font-serif); letter-spacing: -0.01em; color: var(--tinta);
+}
+
+/* reduced motion: one still, every line under it */
+.seq-static { height: auto; }
+.seq-static .seq-stage { position: static; height: auto; display: block; }
+.seq-static .seq-img { height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+.seq-static .seq-caption { display: none; }
+.seq-static .seq-lines { margin: 0; padding: var(--space-3) var(--edge) var(--inset) calc(var(--edge) + 1.2em); max-width: var(--col); font: 400 22px/28px var(--font-serif); }
+.seq-static .seq-lines li { margin-bottom: var(--space-2); }
+
+/* ── 2 · Ramos, 3 · Entrega: one photograph, one line, flat grounds ─────── */
+.chapter { min-height: 100vh; min-height: 100svh; padding: var(--section-gap) var(--edge); display: grid; align-content: end; gap: var(--space-3); }
+#s2 { background: var(--cal); }
+#s3 { background: var(--cal-hondo); }
+.chapter-img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: var(--radius-md); }
+.chapter h2, .action h2 { margin: 0; max-width: var(--col); font: 400 34px/40px var(--font-serif); color: var(--tinta); }
+
+/* a photograph not yet received: the note keeps the photograph's place and size */
+.pending {
+  width: 100%; aspect-ratio: 16 / 9; margin: 0; padding: var(--space-3);
+  border: 1px dashed var(--linea); border-radius: var(--radius-md);
+  font: 400 15px/22px var(--font-sans); color: var(--tinta-suave);
+}
+
+/* ── 4 · The action: the awning band, frame 06 still, one line, one button, the facts, the name at full width ── */
+.action { padding: 0 var(--edge) var(--section-gap); display: grid; align-content: start; gap: var(--space-3); background: var(--cal); }
+.band {
+  position: relative; margin: 0 calc(-1 * var(--edge)) var(--space-3);
+  height: var(--space-4);
+  background: var(--vino);
+}
+/* the awning's valance: half-discs of diameter space-3 hanging under the band */
+.band::after {
+  content: ""; position: absolute; left: 0; right: 0; top: 100%; height: 12px;
+  background: radial-gradient(circle at 12px 0, var(--vino) 11.5px, transparent 12.5px) left top / 24px 12px repeat-x;
+}
+.action-img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: var(--radius-md); }
+.action-link {
+  justify-self: start; display: inline-flex; align-items: center; height: 48px; padding: 0 var(--space-4);
+  border-radius: var(--radius-full); background: var(--vino); color: var(--cal);
+  font: 600 16px/20px var(--font-sans); text-decoration: none;
+  transition: background-color 200ms ease, transform 200ms ease;
+}
+.action-link:hover { background: color-mix(in oklab, var(--vino) 86%, var(--tinta)); transform: translateY(-1px); }
+.action-link:active { transform: translateY(1px) scale(0.98); transition-duration: 80ms; }
+.action-link:focus-visible { outline: none; box-shadow: var(--focus-ring); }
+.facts { margin-top: var(--space-3); padding-top: var(--space-3); border-top: 1px solid var(--linea); }
+.action-facts { margin: 0; font: 400 15px/22px var(--font-sans); font-variant-numeric: tabular-nums; color: var(--tinta-suave); text-wrap: pretty; }
+/* the designed close: the name returns at full width, as on the awning */
+.close {
+  margin: var(--section-gap) 0 0; overflow: hidden; white-space: nowrap;
+  font: 700 clamp(44px, 10.5vw, 150px)/0.9 var(--font-sans); font-stretch: 112%;
+  letter-spacing: 0.06em; text-transform: uppercase; color: var(--vino);
+}
+
+/* ── phones: the frame is a band at its real ratio, the caption beneath — no CSS crop ── */
+@media (max-width: 767px) {
+  :root { --caption-row: calc(2 * 40px + var(--space-3) + var(--space-3)); }
+  .seq-stage { grid-template-rows: auto auto; align-content: center; }
+  .seq-img { height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+  .seq-caption { font: 400 34px/40px var(--font-serif); padding: var(--space-3) var(--edge) var(--space-3); }
+  /* sections 2 and 3: their own height on phones — a photograph and a line, not a screen with the content at the bottom */
+  .chapter { min-height: 0; align-content: start; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .action-link, .action-link:hover, .action-link:active { transition: none; transform: none; }
+}
+
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
