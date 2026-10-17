@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Nikoflor</title>
-<meta name="description" content="Floristería Nikoflor, en el Mercado Municipal de Fuengirola. Ramos hechos a mano cada mañana, flores y plantas. Escríbenos por WhatsApp.">
-<meta name="theme-color" content="#fbf7f1">
+<title>Nikoflor — floristería en el Mercado Municipal de Fuengirola</title>
+<meta name="description" content="Floristería Nikoflor, en el Mercado Municipal de Fuengirola. Un quiosco de flores que abre por las mañanas: ramos hechos a mano, plantas y entrega a domicilio. Escríbenos por WhatsApp.">
+<meta name="theme-color" content="#5e2e3c">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Nikoflor">
 <meta property="og:title" content="Nikoflor — floristería en el Mercado Municipal de Fuengirola">
 <meta property="og:description" content="A las nueve y media el quiosco está vacío. A las diez, ya es Nikoflor. Ramos hechos a mano cada mañana; escríbenos por WhatsApp.">
-<meta property="og:site_name" content="Nikoflor">
 <meta property="og:url" content="https://nikoflor.es/">
 <meta property="og:image" content="https://nikoflor.es/og.jpg">
 <meta property="og:image:width" content="1200">
@@ -19,61 +19,199 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://nikoflor.es/">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%235e2e3c'/><rect x='6' y='16' width='52' height='18' fill='%23fbf7f1'/><g fill='%23fbf7f1'><circle cx='12.5' cy='34' r='6.5'/><circle cx='25.5' cy='34' r='6.5'/><circle cx='38.5' cy='34' r='6.5'/><circle cx='51.5' cy='34' r='6.5'/></g></svg>">
-<link rel="preload" as="image" href="frames/01.webp" media="(min-width: 768px)">
-<link rel="preload" as="image" href="frames/01-1280.webp" media="(max-width: 767px)">
+<link rel="preload" as="image" href="frames/01-sq-1080.webp" imagesrcset="frames/01-sq-1080.webp 1080w, frames/01-sq.webp 1800w" imagesizes="(min-width: 1000px) and (min-aspect-ratio: 5/4) 60vw, 100vw" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..700&family=Young+Serif&display=swap">
 <link rel="stylesheet" href="site.css">
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
-<a class="skip" href="#s4">Saltar al contacto</a>
+<a class="skip" href="#contacto">Saltar al contacto</a>
+
+<header class="awning">
+  <div class="awning-bar">
+    <a class="wordmark" href="#manana">Nikoflor</a>
+    <span class="clock" data-clock aria-hidden="true">9:30</span>
+    <nav class="nav" aria-label="Secciones">
+      <a href="#lo-que-hay">Lo que hay</a>
+      <a href="#azules">Las azules</a>
+      <a href="#entrega">Entrega</a>
+      <a href="#visitanos">Visítanos</a>
+    </nav>
+    <a class="awning-cta" href="https://wa.me/14168342702?text=Hola%20Nikoflor%2C%20quiero%20un%20ramo%20para" aria-label="Escribir por WhatsApp">WhatsApp</a>
+  </div>
+</header>
+
 <main>
+  <div class="read">
 
-  <!-- §3 section 1 — La mañana: six frames, one locked camera, bound to scroll position -->
-  <section class="seq" id="s1" data-frames="6" data-src="frames/{n}.webp" data-src-narrow="frames/{n}-1280.webp" style="--frames: 6">
-    <div class="seq-stage">
-      <img class="seq-img" alt="El quiosco de Nikoflor en el Mercado Municipal de Fuengirola, llenándose de flores una mañana" decoding="async">
-      <p class="seq-caption" aria-live="off"></p>
+    <!-- 1 — La mañana: the stage and six steps. Desktop: each line cuts the stage to its frame as it crosses the middle of the
+         screen. Phone: the frame and its line are pinned together and change in place, like subtitles. -->
+    <section class="manana" id="manana" aria-label="La mañana en el quiosco">
+     <div class="pin">
+      <div class="stage" aria-hidden="true">
+        <img data-key="m1" src="frames/01-sq-1080.webp" srcset="frames/01-sq-1080.webp 1080w, frames/01-sq.webp 1800w" sizes="(min-width: 1000px) and (min-aspect-ratio: 5/4) 60vw, 100vw" width="1800" height="1800" alt="" fetchpriority="high">
+        <img data-key="m2" src="frames/02-sq-1080.webp" srcset="frames/02-sq-1080.webp 1080w, frames/02-sq.webp 1800w" sizes="(min-width: 1000px) and (min-aspect-ratio: 5/4) 60vw, 100vw" width="1800" height="1800" alt="">
+        <img data-key="m3" src="frames/03-sq-1080.webp" srcset="frames/03-sq-1080.webp 1080w, frames/03-sq.webp 1800w" sizes="(min-width: 1000px) and (min-aspect-ratio: 5/4) 60vw, 100vw" width="1800" height="1800" alt="">
+        <img data-key="m4" src="frames/04-sq-1080.webp" srcset="frames/04-sq-1080.webp 1080w, frames/04-sq.webp 1800w" sizes="(min-width: 1000px) and (min-aspect-ratio: 5/4) 60vw, 100vw" width="1800" height="1800" alt="">
+        <img data-key="m5" src="frames/05-sq-1080.webp" srcset="frames/05-sq-1080.webp 1080w, frames/05-sq.webp 1800w" sizes="(min-width: 1000px) and (min-aspect-ratio: 5/4) 60vw, 100vw" width="1800" height="1800" alt="">
+        <img data-key="m6" src="frames/06-sq-1080.webp" srcset="frames/06-sq-1080.webp 1080w, frames/06-sq.webp 1800w" sizes="(min-width: 1000px) and (min-aspect-ratio: 5/4) 60vw, 100vw" width="1800" height="1800" alt="">
+        <img data-key="ramos" src="img/ramos.webp" width="1800" height="1800" alt="" loading="lazy" decoding="async">
+        <img data-key="azules" src="img/azules.webp" width="1700" height="1700" alt="" loading="lazy" decoding="async">
+        <img data-key="visita" src="img/visita.webp" width="1800" height="1800" alt="" loading="lazy" decoding="async">
+        <img data-key="final" src="frames/06-sq-1080.webp" srcset="frames/06-sq-1080.webp 1080w, frames/06-sq.webp 1800w" sizes="(min-width: 1000px) and (min-aspect-ratio: 5/4) 60vw, 100vw" width="1800" height="1800" alt="" loading="lazy" decoding="async">
+      </div>
+
+      <div class="steps">
+      <div class="step step--first">
+        <h1 class="visually-hidden">Nikoflor, floristería en el Mercado Municipal de Fuengirola</h1>
+        <h2 class="line" data-scene="m1" data-time="9:30" data-hold>A las nueve y media, el quiosco está vacío.</h2>
+        <p class="support">Un quiosco de flores en el Mercado Municipal de Fuengirola que solo abre por las mañanas. Ramos hechos a mano, plantas y entrega a domicilio.</p>
+        <div class="actions">
+          <a class="btn btn--vino" href="https://wa.me/14168342702?text=Hola%20Nikoflor%2C%20quiero%20un%20ramo%20para">Escribir por WhatsApp</a>
+          <span class="cue">Baja y abre el quiosco</span>
+        </div>
+      </div>
+      <div class="step">
+        <h2 class="line rise" data-scene="m2" data-time="9:36" data-hold>Primero salen las cajas.</h2>
+        <p class="support">Sube la persiana. Salen las cajas de madera y el carro de las plantas.</p>
+      </div>
+      <div class="step">
+        <h2 class="line rise" data-scene="m3" data-time="9:42" data-hold>Luego, flor por flor.</h2>
+        <p class="support">Rosas, lilium, claveles y eucalipto, recién llegados.</p>
+      </div>
+      <div class="step">
+        <h2 class="line rise" data-scene="m4" data-time="9:48" data-hold>Después, las plantas.</h2>
+        <p class="support">Ciclámenes, helechos y algún ciprés pequeño, en macetas de barro.</p>
+      </div>
+      <div class="step">
+        <h2 class="line rise" data-scene="m5" data-time="9:54" data-hold>Las azules son la firma.</h2>
+        <p class="support">Un solo cubo, delante de todo. Más abajo te contamos por qué.</p>
+      </div>
+      <div class="step step--last">
+        <h2 class="line rise" data-scene="m6" data-time="10:00">A las diez, ya es Nikoflor.</h2>
+        <p class="support">Sale el sol. Hasta las dos y media, de lunes a sábado.</p>
+      </div>
+      </div>
+     </div>
+    </section>
+
+    <!-- 2 — Lo que hay: the printed sheet on the awning's colour. Stage: the buckets. -->
+    <section class="panel panel--vino" id="lo-que-hay" data-scene="ramos" data-wipe="0.35">
+      <figure class="inline-photo"><img src="img/ramos.webp" width="1800" height="1800" alt="Cubos de rosas rojas, lilium blancos y eucalipto delante del quiosco, sobre cajas de madera" loading="lazy" decoding="async"></figure>
+      <h2 class="h2 rise" data-time="11:00">A las once, salen los primeros ramos.</h2>
+      <div class="sheet rise">
+        <p class="sheet-title">Lo que hay en el quiosco</p>
+        <p class="sheet-note">Cambia cada mañana. Pregunta por WhatsApp.</p>
+        <div class="sheet-group">
+          <h3>Ramos</h3>
+          <ul>
+            <li><b>Para regalar</b><span>De una docena de rosas a cien, con lo que ha entrado esa mañana.</span></li>
+            <li><b>De novia</b><span>Clásicos, en blanco, hechos a mano.</span></li>
+            <li><b>Rosas azules</b><span>La firma de la casa, en ramo o sueltas.</span></li>
+          </ul>
+        </div>
+        <div class="sheet-group">
+          <h3>Plantas</h3>
+          <ul>
+            <li><b>De interior y de balcón</b><span>Orquídeas, ciclámenes, helechos y cipreses pequeños.</span></li>
+            <li><b>Jardineras</b><span>Montadas desde cero, flor por flor.</span></li>
+          </ul>
+        </div>
+        <div class="sheet-group">
+          <h3>Fechas</h3>
+          <ul>
+            <li><b>San Valentín</b><span>Rosas rojas, y azules para quien se atreve.</span></li>
+            <li><b>Navidad</b><span>Centros y jarrones de temporada.</span></li>
+          </ul>
+        </div>
+        <p class="sheet-hours">De lunes a sábado<br>de 9:30 a 14:30</p>
+      </div>
+    </section>
+
+    <!-- 3 — Las azules. Stage: the blue roses. -->
+    <section class="panel panel--hondo" id="azules" data-scene="azules" data-wipe="0.35">
+      <figure class="inline-photo"><img src="img/azules.webp" width="1700" height="1700" alt="Un cubo de rosas azules entre lilium, claveles rojos y claveles rosas, delante del mostrador de mármol" loading="lazy" decoding="async"></figure>
+      <h2 class="h2 h2--azul rise" data-time="12:00">A las doce, preguntan por las azules.</h2>
+      <p class="statement rise">«Si las flores fueran joyas, serían azules.»</p>
+      <p class="body">Son rosas teñidas de un azul que no se olvida. Las montamos en ramo o te las llevas sueltas: para quien no quiere regalar algo, sino un momento.</p>
+      <a class="textlink" href="https://wa.me/14168342702?text=Hola%20Nikoflor%2C%20quer%C3%ADa%20preguntar%20por%20las%20rosas%20azules">Pregunta por las azules</a>
+    </section>
+
+  </div>
+
+  <!-- 4 — Entrega: breaks the split and passes over the stage. While it covers it, the stage changes to the kiosk front. -->
+  <section class="full entrega" id="entrega" data-scene="visita">
+    <figure class="band"><img src="img/calle.webp" width="2200" height="943" alt="La calle junto al Mercado Municipal de Fuengirola a media mañana: una palmera, las tiendas y el primer toldo del quiosco" loading="lazy" decoding="async"></figure>
+    <div class="entrega-grid">
+      <div class="entrega-text">
+        <h2 class="h2 h2--big rise" data-time="13:00">A la una, sale el reparto.</h2>
+        <p class="body">No hace falta venir. Lo llevamos a casa en Fuengirola, normalmente al día siguiente. Hay quien nos escribe desde Bélgica.</p>
+      </div>
+      <div class="slip rise" role="group" aria-label="Cómo llega un ramo a casa">
+        <h3>Hoy</h3>
+        <dl>
+          <div><dt>Nos escribes por WhatsApp</dt><span class="dots" aria-hidden="true"></span><dd>para quién y adónde</dd></div>
+          <div><dt>Montamos el ramo a mano</dt><span class="dots" aria-hidden="true"></span><dd>en el quiosco</dd></div>
+        </dl>
+        <h3>Mañana</h3>
+        <dl>
+          <div><dt>Sale el reparto</dt><span class="dots" aria-hidden="true"></span><dd>por Fuengirola</dd></div>
+        </dl>
+        <p class="slip-total"><span>Un ramo en su puerta</span><span>normalmente, al día siguiente</span></p>
+      </div>
     </div>
-    <ol class="seq-lines visually-hidden">
-      <li>A las nueve y media, el quiosco está vacío.</li>
-      <li>Primero salen las cajas.</li>
-      <li>Luego, flor por flor.</li>
-      <li>Después, las plantas.</li>
-      <li>Las azules son la firma.</li>
-      <li>A las diez, ya es Nikoflor.</li>
-    </ol>
   </section>
 
-  <!-- §3 section 2 — Ramos. The photograph is the owner's (frames/s2.jpg), not yet received. -->
-  <section class="chapter" id="s2">
-    <p class="pending">[Foto del dueño: un ramo terminado, en la mano, a la luz del día — pendiente]</p>
-    <h2>Hecho a mano, con respeto por cada flor.</h2>
-  </section>
+  <div class="read">
 
-  <!-- §3 section 3 — Entrega. The photograph is the owner's (frames/s3.jpg), not yet received. -->
-  <section class="chapter" id="s3">
-    <p class="pending">[Foto del dueño: un ramo saliendo del quiosco — pendiente]</p>
-    <h2>Lo llevamos a casa. Normalmente, mañana.</h2>
-  </section>
+    <!-- 5 — Visítanos. Stage: the kiosk front with the awning. -->
+    <section class="panel" id="visitanos">
+      <figure class="inline-photo"><img src="img/visita.webp" width="1800" height="1800" alt="El quiosco de Nikoflor: el remate, el tejado de barro y el toldo granate con el nombre" loading="lazy" decoding="async"></figure>
+      <h2 class="h2 rise" data-time="14:30">A las dos y media, cerramos.</h2>
+      <p class="status rise" data-status>De lunes a sábado, de 9:30 a 14:30.</p>
+      <p class="body">Estamos en el Mercado Municipal de Fuengirola, en la avenida Jesús Cautivo. Busca el toldo granate.</p>
+      <dl class="facts">
+        <div><dt>Dónde</dt><dd>Mercado Municipal, avenida Jesús Cautivo, Fuengirola<br><a href="https://share.google/L6HyrfydYodzczbng">Cómo llegar</a></dd></div>
+        <div><dt>Cuándo</dt><dd>De lunes a sábado, de 9:30 a 14:30<br>El domingo, cerrado</dd></div>
+        <div><dt>Teléfono</dt><dd><a href="tel:+34687834814">687 83 48 14</a></dd></div>
+        <div><dt>Pedidos</dt><dd><a href="https://wa.me/14168342702?text=Hola%20Nikoflor%2C%20quiero%20un%20ramo%20para">Por WhatsApp</a>, o en el quiosco</dd></div>
+      </dl>
+    </section>
 
-  <!-- §3 section 4 — the action. The awning band, frame 06 still, one line, one button, the facts, then the name at full width. -->
-  <section class="action" id="s4">
-    <div class="band" aria-hidden="true"></div>
-    <picture>
-      <source media="(max-width: 767px)" srcset="frames/06-1280.webp">
-      <img class="action-img" src="frames/06.webp" alt="El quiosco de Nikoflor abierto, lleno de flores, con el sol de la mañana" loading="lazy" decoding="async">
-    </picture>
-    <h2>Dime para quién es.</h2>
-    <a class="action-link" href="https://wa.me/34687834814?text=Hola%20Nikoflor%2C%20quiero%20un%20ramo%20para">Escribir por WhatsApp</a>
-    <footer class="facts">
-      <p class="action-facts">Mercado Municipal, Fuengirola · lunes a sábado, 9:30–14:30</p>
-      <p class="close" aria-hidden="true">Nikoflor</p>
-    </footer>
-  </section>
+    <!-- 6 — The close. Stage: frame 06 again, rising like the shutter. -->
+    <section class="panel panel--vino panel--cierre" id="contacto" data-scene="final" data-wipe="0.35">
+      <h2 class="display rise">Dime para quién es.</h2>
+      <p class="body">Cuéntanos la ocasión, para quién es y para cuándo lo quieres.</p>
+      <div class="actions">
+        <a class="btn btn--cal" href="https://wa.me/14168342702?text=Hola%20Nikoflor%2C%20quiero%20un%20ramo%20para">Escribir por WhatsApp</a>
+        <a class="tel" href="tel:+34687834814">o llama al 687 83 48 14</a>
+      </div>
+    </section>
 
+  </div>
+
+  <footer class="full foot">
+    <figure class="foot-photo"><img src="img/toldo.webp" width="1000" height="1180" alt="El toldo granate del quiosco con el nombre Nikoflor bajo el tejado de barro" loading="lazy" decoding="async"></figure>
+    <div class="foot-side">
+      <p class="foot-mark">Nikoflor</p>
+      <nav class="foot-nav" aria-label="Secciones">
+        <a href="#manana">La mañana</a>
+        <a href="#lo-que-hay">Lo que hay</a>
+        <a href="#azules">Las azules</a>
+        <a href="#entrega">Entrega</a>
+        <a href="#visitanos">Visítanos</a>
+      </nav>
+      <div class="foot-blocks">
+        <p>Mercado Municipal<br>Avenida Jesús Cautivo, Fuengirola<br><a href="tel:+34687834814">687 83 48 14</a></p>
+        <p><a href="https://www.instagram.com/floristerianikoflor/">Instagram</a><br><a href="https://www.tiktok.com/@floristerianikoflor">TikTok</a><br><a href="https://share.google/L6HyrfydYodzczbng">Reseñas en Google</a></p>
+      </div>
+      <p class="foot-line">Para ser realista, soy tu mejor florista.</p>
+      <p class="foot-legal">© 2026 Floristería Nikoflor · Fuengirola</p>
+    </div>
+  </footer>
 </main>
-<script src="sequence.js" defer></script>
+<script src="site.js" defer></script>
 </body>
 </html>
